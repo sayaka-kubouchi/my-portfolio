@@ -18,6 +18,7 @@ const variants = {
   hidden: { opacity: 0, y: 50 },
 }
 
+
 const HeroImage = styled.div`
   display: flex;
   width: 100vw;
