@@ -49,9 +49,9 @@ const Overview = styled(Role)`
   }
 `
 
-const Work1 = () => (
+const WorkUIMusicLogin = () => (
   <LayoutChild>
-    <SEO title="Page two" />
+    <SEO title="saya@design/Work-UI-Music-Login" />
     <Container>
       <Title>
         <h1 style={{marginBottom: "1rem"}}>Ambient</h1>
@@ -92,4 +92,4 @@ const Work1 = () => (
   </LayoutChild>
 )
 
-export default Work1
+export default WorkUIMusicLogin

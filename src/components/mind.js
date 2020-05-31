@@ -16,6 +16,9 @@ const Container = styled.div`
   align-items: center;
   vertical-align: middle;
   margin: auto 0;
+  @media screen and (max-width: 960px){
+      padding: 4rem 2rem;
+  }
 `
 const Wrapper = styled.div`
   max-width: 1200px;
@@ -29,6 +32,11 @@ const Contents = styled.div`
   padding: 4rem 0;
 `
 
+//蛍光ペン
+const Underline = styled.span`
+    background: linear-gradient(transparent 70%, rgb(255, 204, 102) 0%);
+`
+
 //about
 class Mind extends React.Component {
     render() {
@@ -36,10 +44,11 @@ class Mind extends React.Component {
         <Container id="mind"> 
           <Wrapper>
             <div style={{textAlign: "center"}}>
-                <h1 style={{marginBottom: "0.4rem"}}>Mind</h1>
+                <h1><Underline>Mind</Underline></h1>
+                <p>日々の仕事の中で意識していること</p>
             </div>
             <Contents>
-              <div style={{ marginBottom: "4rem" }}>
+              <div style={{marginBottom: "4rem"}}>
                 <h2>ユーザーの前に「隣のエンジニア」に共感する</h2>
                 <p>
                   デザイナーは定性的な面からもユーザーに共感し、ユーザーの課題を解決に導くのが使命です。

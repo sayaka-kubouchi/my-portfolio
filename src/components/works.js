@@ -16,6 +16,9 @@ const Container = styled.div`
     margin: 0 auto;
     padding: 6rem 8rem;
     background-color: #fff;
+    @media screen and (max-width: 960px){
+      padding: 4rem 2rem;
+  }
 `
 
 const Wrapper = styled.div`
@@ -87,6 +90,11 @@ const SubCaption = styled(Caption)`
     margin-bottom: 0;
 `
 
+//蛍光ペン
+const Underline = styled.span`
+    background: linear-gradient(transparent 70%, rgb(255, 204, 102) 0%);
+`
+
 
 
 export default () => {
@@ -94,12 +102,32 @@ export default () => {
         <Container id="works">
             <Wrapper>
                 <div style={{textAlign: "center"}}>
-                    <h1 style={{marginBottom: "0.4rem"}}>Works</h1>
+                    <h1><Underline>Works</Underline></h1>
                 </div>
             
                 <Gallery>
                     <Item>
-                        <Link to="work-ambient">
+                        <Link to="work-ui-music">
+                            <WorkImg src={UIMusic} />
+                                <Mask>
+                                    <Caption>インスタユーザー向けミュージックアプリ</Caption>
+                                    <SubCaption>UI Design</SubCaption>
+                                </Mask>
+                        </Link>
+                    </Item>
+
+                    <Item>
+                        <Link to="work-ui-cooking">
+                            <WorkImg src={UICooking} />
+                                <Mask>
+                                    <Caption>冷蔵庫にあるものでつくれるお料理レシピアプリ</Caption>
+                                    <SubCaption>UI Design</SubCaption>
+                                </Mask>
+                        </Link>
+                    </Item>
+                    
+                    <Item>
+                        <Link to="work-ui-music-login">
                             <WorkImg src={UIMusicLogin} />
                                 <Mask>
                                     <Caption>大学生向けミュージックアプリ</Caption>
@@ -109,7 +137,7 @@ export default () => {
                     </Item>
                     
                     <Item>
-                        <Link to="work1">
+                        <Link to="work-ui-chat">
                             <WorkImg src={UIChat} />
                                 <Mask>
                                     <Caption>ビジネスでも使えるチャットアプリ</Caption>
@@ -118,25 +146,6 @@ export default () => {
                         </Link>
                     </Item>
 
-                    <Item>
-                        <Link to="work1">
-                            <WorkImg src={UICooking} />
-                                <Mask>
-                                    <Caption>冷蔵庫にあるものでつくれるお料理レシピアプリ</Caption>
-                                    <SubCaption>UI Design</SubCaption>
-                                </Mask>
-                        </Link>
-                    </Item>
-
-                    <Item>
-                        <Link to="work1">
-                            <WorkImg src={UIMusic} />
-                                <Mask>
-                                    <Caption>インスタユーザー向けミュージックアプリ</Caption>
-                                    <SubCaption>UI Design</SubCaption>
-                                </Mask>
-                        </Link>
-                    </Item>
                 </Gallery>
             </Wrapper>
         </Container>

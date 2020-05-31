@@ -12,8 +12,11 @@ const Container = styled.div`
   min-height: 100vh;
   width: 100%;
   padding: 6rem 8rem;
-  background-color: #eee;
+  background-color: #fff;
   align-items: center;
+  @media screen and (max-width: 960px){
+      padding: 4rem 2rem;
+  }
 `
 
 const Wrapper = styled.div`
@@ -35,7 +38,7 @@ const NameSpace = styled.div`
   width: 100%;
   margin: 0 auto;
   align-items: center;
-  padding: 4rem 0;
+  padding: 2rem 2rem 1rem 2rem;
   text-align: center;
   h2, h4, p {
     margin-bottom: 0.4rem;
@@ -48,7 +51,12 @@ const AboutContents = styled.div`
   flex: 2;
   margin: auto;
   width: 100%;
-  padding: 4rem 0;
+  padding: 0;
+`
+
+//蛍光ペン
+const Underline = styled.span`
+    background: linear-gradient(transparent 70%, rgb(255, 204, 102) 0%);
 `
 
 //about
@@ -58,7 +66,7 @@ class About extends React.Component {
         <Container id="about"> 
           <Wrapper>
             <div style={{textAlign: "center"}}>
-                <h1 style={{marginBottom: "0.4rem"}}>About me</h1>
+                <h1><Underline>About me</Underline></h1>
             </div>
 
             <Contents>

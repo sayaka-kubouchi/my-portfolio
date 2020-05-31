@@ -16,9 +16,12 @@ const Container = styled.div`
   min-height: 100vh;
   width: 100%;
   padding: 6rem 8rem;
-  background-color: #0A1837;
+  background-color: rgb(255, 204, 102);
   color: #fff;
   text-align: center;
+  @media screen and (max-width: 960px){
+      padding: 4rem 1rem;
+  }
 `
 
 const Wrapper = styled.div`
@@ -55,7 +58,7 @@ export default () => {
     return (
         <Container id="contact">
             <Wrapper>
-                <h1 style={{fontSize: "3rem", color: "rgba(255, 255, 255, 0.8)", marginBottom: "1rem"}}>Contact</h1>
+                <h1 style={{color: "rgba(255, 255, 255, 0.8)", marginBottom: "1rem"}}>Contact</h1>
 
                 <Links>
                     <ContactIcon href="https://twitter.com/sayadesign2" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} style={{fontSize:"4rem"}}/></ContactIcon>
