@@ -25,8 +25,6 @@ const Flexbox = styled.div`
   align-items: center;
 `
 
-const LogoSpace = styled.div``
-
 const Logo = styled(Link)`
   font-family: 'Pacifico';
   color: #333;
@@ -64,9 +62,9 @@ const Header = ({ siteTitle }) => (
   <Wrapper>
     <Inner>
       <Flexbox>
-        <LogoSpace>
+        <div>
           <Logo to="top" duration={1000}>{siteTitle}</Logo>
-        </LogoSpace>
+        </div>
       
         <GlobalNavSpace class="nav-item">
             <StyledLink to="about" duration={1000}>ABOUT</StyledLink>
