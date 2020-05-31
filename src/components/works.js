@@ -14,18 +14,23 @@ const Container = styled.div`
     min-height: 100vh;
     width: 100%;
     margin: 0 auto;
-    padding: 4rem;
+    padding: 6rem 8rem;
     background-color: #fff;
+`
+
+const Wrapper = styled.div`
+    max-width: 1200px;
+    margin: auto;
 `
 
 const Gallery = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, 30em);
-    grid-auto-rows: 18em;
+    grid-template-columns: repeat(auto-fit, 25em);
+    grid-auto-rows: 16em;
     justify-content: center;
     grid-gap: 4rem;
     max-width: 100%;
-    margin: 4rem 8rem;
+    margin: 4rem 0;
 `
 
 const Item = styled.div`
@@ -35,14 +40,14 @@ const Item = styled.div`
     background: #fff;
     border-radius: 10px;
     text-align: center;
-    vertical-align: middle;
+    vertical-align: top;
     align-items: center;
 `
 
 const WorkImg = styled.img`
     transition-duration: 0.6s;
     ${Item} :hover & {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 `
 
@@ -67,16 +72,18 @@ const Mask = styled.div`
 `
 
 const Caption = styled.p`
-    font-family: 'M PLUS Rounded 1c';
-	font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
 	text-align: center;
 	color: #fff;
     letter-spacing: 0.1rem;
     line-height: 2rem;
+    margin-bottom: 0;
 `
 
 const SubCaption = styled(Caption)`
-	font-size: 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
     margin-bottom: 0;
 `
 
@@ -85,52 +92,53 @@ const SubCaption = styled(Caption)`
 export default () => {
     return (
         <Container id="works">
-            <div style={{textAlign: "center"}}>
-                <h2 style={{marginBottom: "0.4rem", letterSpacing: "0.2rem"}}>WORKS</h2>
-            </div>
-        
-            <Gallery>
-                <Item>
-                    <Link to="work1">
-                        <WorkImg src={UIMusicLogin} />
-                            <Mask>
-                                <Caption>大学生向けミュージックアプリ</Caption>
-                                <SubCaption>UI Design</SubCaption>
-                            </Mask>
-                    </Link>
-                </Item>
-                
-                <Item>
-                    <Link to="work1">
-                        <WorkImg src={UIChat} />
-                            <Mask>
-                                <Caption>ビジネスでも使えるチャットアプリ</Caption>
-                                <SubCaption>UI Design</SubCaption>
-                            </Mask>
-                    </Link>
-                </Item>
+            <Wrapper>
+                <div style={{textAlign: "center"}}>
+                    <h1 style={{marginBottom: "0.4rem"}}>Works</h1>
+                </div>
+            
+                <Gallery>
+                    <Item>
+                        <Link to="work-ambient">
+                            <WorkImg src={UIMusicLogin} />
+                                <Mask>
+                                    <Caption>大学生向けミュージックアプリ</Caption>
+                                    <SubCaption>UI Design</SubCaption>
+                                </Mask>
+                        </Link>
+                    </Item>
+                    
+                    <Item>
+                        <Link to="work1">
+                            <WorkImg src={UIChat} />
+                                <Mask>
+                                    <Caption>ビジネスでも使えるチャットアプリ</Caption>
+                                    <SubCaption>UI Design</SubCaption>
+                                </Mask>
+                        </Link>
+                    </Item>
 
-                <Item>
-                    <Link to="work1">
-                        <WorkImg src={UICooking} />
-                            <Mask>
-                                <Caption>冷蔵庫にあるものでつくれるお料理レシピアプリ</Caption>
-                                <SubCaption>UI Design</SubCaption>
-                            </Mask>
-                    </Link>
-                </Item>
+                    <Item>
+                        <Link to="work1">
+                            <WorkImg src={UICooking} />
+                                <Mask>
+                                    <Caption>冷蔵庫にあるものでつくれるお料理レシピアプリ</Caption>
+                                    <SubCaption>UI Design</SubCaption>
+                                </Mask>
+                        </Link>
+                    </Item>
 
-                <Item>
-                    <Link to="work1">
-                        <WorkImg src={UIMusic} />
-                            <Mask>
-                                <Caption>インスタユーザー向けミュージックアプリ</Caption>
-                                <SubCaption>UI Design</SubCaption>
-                            </Mask>
-                    </Link>
-                </Item>
-            </Gallery>
-        
+                    <Item>
+                        <Link to="work1">
+                            <WorkImg src={UIMusic} />
+                                <Mask>
+                                    <Caption>インスタユーザー向けミュージックアプリ</Caption>
+                                    <SubCaption>UI Design</SubCaption>
+                                </Mask>
+                        </Link>
+                    </Item>
+                </Gallery>
+            </Wrapper>
         </Container>
     )
 }

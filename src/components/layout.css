@@ -1,5 +1,5 @@
 html {
-  font-family: 'M PLUS Rounded 1c', 'Pacifico';
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
@@ -237,6 +237,7 @@ img {
   margin-bottom: 1.45rem;
 }
 h1 {
+  font-family: 'Pacifico';
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -389,6 +390,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1rem;
+  color: rgba(0, 0, 0, 0.7);
 }
 figure {
   margin-left: 0;

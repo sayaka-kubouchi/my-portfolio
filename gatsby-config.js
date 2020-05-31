@@ -34,7 +34,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Pacifico', 'Material+Icons']
+          families: ['M PLUS Rounded 1c:500,700', 'Pacifico', 'Material+Icons']
         },
       }
     },
@@ -45,17 +45,6 @@ module.exports = {
           //include: /assets/
         }
       }
-    },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `M PLUS Rounded 1c`,
-            variants: [`500`, `700`]
-          },
-        ],
-      },
     },
     {
       resolve: "gatsby-plugin-page-progress",

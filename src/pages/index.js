@@ -8,19 +8,9 @@ import styled from "styled-components"
 //Components
 import HeroImage from "../components/heroImage"
 import About from "../components/about"
+import Mind from "../components/mind"
 import Works from "../components/works"
 import Contact from "../components/contact"
-
-
-/*
-//全体コンテナ（Scroll-Snap-Control）
-const Container = styled.div`
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-padding-top: 4rem;
-  max-height: 100vh;
-`
-*/
 
 
 
@@ -30,6 +20,7 @@ const IndexPage = () => (
 
       <HeroImage />
       <About />
+      <Mind />
       <Works />
       <Contact />
 

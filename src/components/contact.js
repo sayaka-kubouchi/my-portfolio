@@ -11,35 +11,34 @@ import wantedlyIcon from "../images/wantedly_mark_white.png"
 
 //Contact
 const Container = styled.div`
-  //scroll-snap-align: start;
   display: flex;
-  height: 100vh;
+  flex-direction: column;
+  min-height: 100vh;
   width: 100%;
-  padding: 4rem;
+  padding: 6rem 8rem;
   background-color: #0A1837;
   color: #fff;
+  text-align: center;
+`
+
+const Wrapper = styled.div`
+  margin: auto;
 `
 
 const Title = styled.div`
-    display: flex;
-    flex-direction: column;
-    flex: 1;
     width: 100%;
     margin: auto;
-    align-items: center;
-    padding: 4rem;
+    text-align: center;
 `
 
 //Contact Links
 const Links = styled.div`
   display: flex;
-  flex: 1;
   width: 100%;
   color: #fff;
   align-items: center;
-  justify-content: left;
-  margin: 0 auto;
-  padding: 4rem;
+  justify-content: center;
+  margin: auto;
 `
 
 const ContactIcon = styled.a`
@@ -55,15 +54,15 @@ const ContactIcon = styled.a`
 export default () => {
     return (
         <Container id="contact">
-            <Title>
-                <p style={{fontSize: "3rem", letterSpacing: "0.2rem"}}>CONTACT</p>
-            </Title>
+            <Wrapper>
+                <h1 style={{fontSize: "3rem", color: "rgba(255, 255, 255, 0.8)", marginBottom: "1rem"}}>Contact</h1>
 
-            <Links>
-                <ContactIcon href="https://twitter.com/sayadesign2" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} style={{fontSize:"4rem"}}/></ContactIcon>
-                <ContactIcon href="https://www.wantedly.com/users/18998999"  target="_blank" rel="noopener noreferrer"><img src={wantedlyIcon} alt="Wantedly" style={{width:"5.3rem", marginBottom: "0"}}/></ContactIcon>
-                <ContactIcon href="mailto:"><FontAwesomeIcon icon={faEnvelope} style={{fontSize:"4rem"}}/></ContactIcon>
-            </Links>  
+                <Links>
+                    <ContactIcon href="https://twitter.com/sayadesign2" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} style={{fontSize:"4rem"}}/></ContactIcon>
+                    <ContactIcon href="https://www.wantedly.com/users/18998999"  target="_blank" rel="noopener noreferrer"><img src={wantedlyIcon} alt="Wantedly" style={{minWidth:"5.3rem", maxWidth:"5.3rem", marginBottom: "0"}}/></ContactIcon>
+                    <ContactIcon href="mailto:"><FontAwesomeIcon icon={faEnvelope} style={{fontSize:"4rem"}}/></ContactIcon>
+                </Links>  
+            </Wrapper>
         </Container>
     )
 }

@@ -4,9 +4,9 @@ import React from "react"
 import styled from "styled-components"
 import { Link, animateScroll as scroll } from "react-scroll";
 
-const HeaderWrapper = styled.div`
+const Wrapper = styled.div`
   position: fixed;
-  height: 4rem;
+  height: 3.5rem;
   margin-bottom: 1.45rem;
   display: flex;
   width: 100vw;
@@ -14,7 +14,7 @@ const HeaderWrapper = styled.div`
   z-index: 9999;
 `
 
-const HeaderInner = styled.div`
+const Inner = styled.div`
   margin: auto;
   max-width: 100%;
   width: 100vw;
@@ -33,7 +33,11 @@ const Logo = styled(Link)`
   font-family: 'Pacifico';
   color: #333;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  transition: all 0.6s ease 0s;
+  &:hover {
+    opacity: 0.6;
+  }
 `
 
 const GlobalNavSpace = styled.div``
@@ -44,11 +48,12 @@ const StyledLink = styled(Link)`
   margin: 0 1rem;
   text-decoration: none;
   color: #333;
-  font-size: 1rem;
+  font-size: 0.9rem;
   transition: all 0.6s ease 0s;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   &:hover {
     pointer: cursor;
+    opacity: 0.6;
   }
  
   &.active {
@@ -58,8 +63,8 @@ const StyledLink = styled(Link)`
 
 
 const Header = ({ siteTitle }) => (
-  <HeaderWrapper>
-    <HeaderInner>
+  <Wrapper>
+    <Inner>
       <Flexbox>
         <LogoSpace>
           <Logo to="top" duration={1000}>{siteTitle}</Logo>
@@ -67,12 +72,13 @@ const Header = ({ siteTitle }) => (
       
         <GlobalNavSpace class="nav-item">
             <StyledLink to="about" duration={1000}>ABOUT</StyledLink>
-            <StyledLink activeClass="active" to="works" duration={1000}>WORKS</StyledLink>
-            <StyledLink activeClass="active" to="contact" duration={1000}>CONTACT</StyledLink>
+            <StyledLink to="mind" duration={1000}>MIND</StyledLink>
+            <StyledLink to="works" duration={1000}>WORKS</StyledLink>
+            <StyledLink to="contact" duration={1000}>CONTACT</StyledLink>
         </GlobalNavSpace>
       </Flexbox>
-    </HeaderInner>
-  </HeaderWrapper>
+    </Inner>
+  </Wrapper>
 )
 
 Header.propTypes = {

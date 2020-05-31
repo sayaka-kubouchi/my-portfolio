@@ -3,12 +3,11 @@ import styled from "styled-components"
 
 //Styles
 const Container = styled.div`
-  //scroll-snap-align: start;
   display: flex;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
-  padding: 0 4rem;
+  padding: 8rem 16rem;
   vertical-align: middle;
   align-items: center;
   background-color: #fff;
