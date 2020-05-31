@@ -16,9 +16,7 @@ const Wrapper = styled.div`
 
 const Inner = styled.div`
   margin: auto;
-  max-width: 100%;
-  width: 100vw;
-  padding: 0 4rem;
+  width: 70%;
 `
 
 const Flexbox = styled.div`
