@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
 import { motion, useViewportScroll, useTransform, AnimatePresence } from "framer-motion"
 
 //myImage
