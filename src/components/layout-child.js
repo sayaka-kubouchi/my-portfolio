@@ -14,7 +14,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import HeaderPrev from "./header-prev"
 import "./layout.css"
 
-const duration = 1
+const duration = 1;
 
 const variants = {
   initial: {
