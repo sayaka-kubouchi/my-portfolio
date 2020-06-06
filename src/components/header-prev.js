@@ -1,8 +1,9 @@
 //import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import { Link, animateScroll as scroll } from "react-scroll";
+
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faChevronLeft} from '@fortawesome/free-solid-svg-icons'
 
 const Wrapper = styled.div`
   position: fixed;
@@ -10,7 +11,7 @@ const Wrapper = styled.div`
   margin-bottom: 1.45rem;
   display: flex;
   width: 100vw;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 1);
   z-index: 9999;
 `
 
@@ -32,12 +33,12 @@ const Prev = styled.a`
 `
 
 
-const Header = ({ siteTitle }) => (
+const HeaderPrev = ({ siteTitle }) => (
   <Wrapper>
     <Inner>
-        <Prev href="javascript:history.back();" duration={1000}>←prev</Prev>
+        <Prev href="javascript:history.back();" duration={300}><FontAwesomeIcon icon={faChevronLeft} style={{fontSize:"1rem", margin: "0 0.5rem"}}/>prev</Prev>
     </Inner>
   </Wrapper>
 )
 
-export default Header
+export default HeaderPrev

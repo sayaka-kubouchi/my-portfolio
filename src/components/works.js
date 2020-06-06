@@ -110,7 +110,7 @@ export default () => {
                         <Link to="work-ui-music">
                             <WorkImg src={UIMusic} />
                                 <Mask>
-                                    <Caption>インスタユーザー向けミュージックアプリ</Caption>
+                                    <Caption>インスタ世代向けミュージックアプリ</Caption>
                                     <SubCaption>UI Design</SubCaption>
                                 </Mask>
                         </Link>

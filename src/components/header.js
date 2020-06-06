@@ -63,14 +63,14 @@ const Header = ({ siteTitle }) => (
     <Inner>
       <Flexbox>
         <div>
-          <Logo to="top" duration={1000}>{siteTitle}</Logo>
+          <Logo to="top" duration={300}>{siteTitle}</Logo>
         </div>
       
         <GlobalNavSpace class="nav-item">
-            <StyledLink to="about" duration={1000}>ABOUT</StyledLink>
-            <StyledLink to="mind" duration={1000}>MIND</StyledLink>
-            <StyledLink to="works" duration={1000}>WORKS</StyledLink>
-            <StyledLink to="contact" duration={1000}>CONTACT</StyledLink>
+            <StyledLink to="about" duration={300}>ABOUT</StyledLink>
+            <StyledLink to="mind" duration={300}>MIND</StyledLink>
+            <StyledLink to="works" duration={300}>WORKS</StyledLink>
+            <StyledLink to="contact" duration={300}>CONTACT</StyledLink>
         </GlobalNavSpace>
       </Flexbox>
     </Inner>

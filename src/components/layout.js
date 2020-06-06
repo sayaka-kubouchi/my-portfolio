@@ -8,12 +8,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { motion, AnimatePresence } from "framer-motion"
-
+import { motion, AnimatePresence } from 'framer-motion'
 
 //components
 import Header from "./header"
-import Footer from "./footer"
 import "./layout.css"
 
 const duration = 0.5
@@ -37,6 +35,7 @@ const variants = {
 }
 
 
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -51,10 +50,17 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-        <main>
+      <AnimatePresence>
+        <motion.main
+          key={window.location.pathname}
+          variants={variants}
+          initial="initial"
+          animate="enter"
+          exit="exit"
+        >
           {children}
-        </main>
-      {/*<Footer></Footer>*/}
+        </motion.main>
+      </AnimatePresence>
     </>
   )
 }

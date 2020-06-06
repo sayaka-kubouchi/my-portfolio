@@ -12,14 +12,13 @@ import { motion, AnimatePresence } from "framer-motion"
 
 //components
 import HeaderPrev from "./header-prev"
-import Footer from "./footer"
 import "./layout.css"
 
-const duration = 0.3
+const duration = 1
 
 const variants = {
   initial: {
-    opacity: 0,
+    opacity: 1,
   },
   enter: {
     opacity: 1,
@@ -30,7 +29,7 @@ const variants = {
     },
   },
   exit: {
-    opacity: 0,
+    opacity: 1,
     transition: { duration: duration },
   },
 }
@@ -40,9 +39,17 @@ const LayoutChild = ({ children }) => {
   return (
     <>
     <HeaderPrev />
-    <main>
+    <AnimatePresence>
+        <motion.main
+          key={window.location.pathname}
+          variants={variants}
+          initial="initial"
+          animate="enter"
+          exit="exit"
+        >
       {children}
-    </main>
+      </motion.main>
+    </AnimatePresence>
     </>
   )
 }

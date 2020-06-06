@@ -13,7 +13,6 @@ import Works from "../components/works"
 import Contact from "../components/contact"
 
 
-
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
