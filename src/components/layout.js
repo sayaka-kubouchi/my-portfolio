@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { motion, AnimatePresence } from 'framer-motion'
 
+
 //components
 import Header from "./header"
 import "./layout.css"
@@ -47,22 +48,12 @@ const Layout = ({ children }) => {
     }
   `)
   
-  const windowGlobal = typeof window !== 'undefined' && window;
-
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <AnimatePresence>
-        <motion.main
-          key={windowGlobal.location.pathname}
-          variants={variants}
-          initial="initial"
-          animate="enter"
-          exit="exit"
-        >
+        <main>
           {children}
-        </motion.main>
-      </AnimatePresence>
+        </main>
     </>
   )
 }

@@ -39,17 +39,9 @@ const LayoutChild = ({ children }) => {
   return (
     <>
     <HeaderPrev />
-    <AnimatePresence>
-        <motion.main
-          key={window.location.pathname}
-          variants={variants}
-          initial="initial"
-          animate="enter"
-          exit="exit"
-        >
+    <main>
       {children}
-      </motion.main>
-    </AnimatePresence>
+    </main>
     </>
   )
 }
