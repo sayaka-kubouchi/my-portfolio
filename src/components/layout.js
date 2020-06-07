@@ -52,7 +52,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <AnimatePresence>
         <motion.main
-          key={window.location.pathname}
+          key={location.pathname}
           variants={variants}
           initial="initial"
           animate="enter"
