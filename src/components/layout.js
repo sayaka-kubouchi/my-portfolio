@@ -46,13 +46,15 @@ const Layout = ({ children }) => {
       }
     }
   `)
+  
+  const windowGlobal = typeof window !== 'undefined' && window;
 
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <AnimatePresence>
         <motion.main
-          key={location.pathname}
+          key={windowGlobal.location.pathname}
           variants={variants}
           initial="initial"
           animate="enter"
